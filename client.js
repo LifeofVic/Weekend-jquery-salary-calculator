@@ -49,10 +49,7 @@ function updateRender() {
                 <td>${human.iDNumber}</td>
                 <td>${human.jobTitle}</td>
 				<td>${human.annualSalary}</td>
-                    <button class ="delete-btn">
-                        Delete
-                    </button>
-                </td>
+                    <button type="delete" id="deleteBtn">Remove 👋</button>
             </tr>
         `);
 	}
@@ -64,9 +61,15 @@ function updateRender() {
 }
 
 function updateMonthlySalary() {
-	$('#totalSalary').val();
-	
 
+	let totalSum = 0;
+
+
+	for (human of employees) {
+		//totalSum += Number(),${ human.annualSalary };
+	}
+
+	console.log('Total sum of all employees salary is: ', totalSum);
 
 
 
