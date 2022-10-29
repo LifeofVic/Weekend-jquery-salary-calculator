@@ -73,4 +73,12 @@ function updateMonthlySalary() {
 			</h2>
 		`);
 
+	if (totalSum > 20000) {
+		$('#totalSalary').addClass('.highSalary');
+	}
+	else {
+		$('#totalSalary').removeClass('.highSalary');
+	}
+
+
 }
