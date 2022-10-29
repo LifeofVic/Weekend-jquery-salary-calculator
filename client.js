@@ -53,10 +53,7 @@ function updateRender() {
             </tr>
         `);
 	}
-
-
-
-
+	updateMonthlySalary();
 
 }
 
@@ -66,12 +63,14 @@ function updateMonthlySalary() {
 
 
 	for (human of employees) {
-		//totalSum += Number(),${ human.annualSalary };
+		totalSum += Number(human.annualSalary);
 	}
 
 	console.log('Total sum of all employees salary is: ', totalSum);
-
-
-
+	$('#totalSalary').html(`
+			<h2>	
+				Total Monthly Salary: ${totalSum}
+			</h2>
+		`);
 
 }
