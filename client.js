@@ -16,11 +16,11 @@ function onReady() {
 
 function addingEmployee() {
 
-	employees = {
+	addedEmployees = {
 		firstName: $('#firstNameInput').val(),
 		lastName: $('#lastNameInput').val(),
 		iDNumber: $('#idNumberInput').val(),
-		jobTitle: $('#jobTitle').val(),
+		jobTitle: $('#jobTitleInput').val(),
 		annualSalary: $('#annualSalaryInput').val()
 	}
 	console.log('Current Array of employee: ', employees);
@@ -28,7 +28,9 @@ function addingEmployee() {
 	$('#firstNameInput').val('');
 	$('#lastNameInput').val('');
 	$('#idNumberInput').val('');
-	$('#jobTitle').val('');
+	$('#jobTitleInput').val('');
 	$('#annualSalaryInput').val('');
+
+	employees.push(addedEmployees);
 
 }
