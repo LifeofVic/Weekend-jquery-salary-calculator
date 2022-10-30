@@ -88,9 +88,11 @@ function updateMonthlySalary() {
 
 	let totalSum = 0;
 
+	const monthlySum = 12;
+
 	for (human of employees) {
 		totalSum += Number(human.annualSalary);
-		if (totalSum > 20000) {
+		if ((totalSum / monthlySum) > 20000) {
 			$('#totalSalary').addClass('highSalary');
 		}
 		else {
@@ -98,11 +100,11 @@ function updateMonthlySalary() {
 		}
 
 	}
-	console.log('Total sum of all employees salary is: ', totalSum);
+	console.log('Total sum of all employees salary is: ', totalSum, 'Total monthly salary is: ', monthlySum);
 
 	$('#totalSalary').html(`
 			<h2>	
-				Total Monthly Salary: $ ${totalSum.toLocaleString("en-US")}
+				Total Monthly Salary: $ ${(totalSum / monthlySum).toLocaleString("en-US")}
 			</h2>
 	`);
 
