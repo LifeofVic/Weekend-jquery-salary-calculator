@@ -66,8 +66,17 @@ function updateRender() {
 	$('#employeeTable').empty()
 
 	//Doing a for loop that will create a table with a row for each objects in the employees array and display it accordingly to the array. 
+	$('#employeeTable').append(`
+				<tr>
+				<th>First Name </th>
+				<th>Last Name </th>
+				<th>ID Number </th>
+				<th>Job Title </th>
+				<th>Annual Salary </th>
+			</tr>  `);
 	for (let human of employees) {
 		$('#employeeTable').append(`
+			
             <tr>
                 <td>${human.firstName}</td>
                 <td>${human.lastName}</td>
