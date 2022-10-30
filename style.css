@@ -10,23 +10,26 @@
 #employeeTable,
 td {
 	padding: 2px;
-	border-width: 2px;
+	border-width: 3px;
 	border-style: line;
+	border-collapse: collapse;
 }
 
 td {
-	padding: 8px 12px;
+	padding: 6px 20px;
 	border-style: double;
 }
 
 header {
+	font-size: 24pt;
 	text-align: Center;
-	background-color: blue;
+	background-image: linear-gradient(to right, white, green);
 	padding: 4px;
 	margin: 8px;
 	border-radius: 10px;
 
 }
+
 
 #addEmployee-Btn {
 	padding: 4px;
@@ -55,4 +58,11 @@ header {
 	100% {
 		background-color: red;
 	}
+}
+
+input {
+	color: black;
+	padding: 4px 8px;
+	margin: 6px 4px;
+	cursor: auto;
 }
