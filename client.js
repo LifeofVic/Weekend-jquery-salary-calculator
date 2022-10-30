@@ -35,6 +35,10 @@ function addingEmployee() {
 
 }
 
+function deleteEmployee() {
+
+}
+
 function updateRender() {
 
 	//clearing the DOM to get ready to add the employees array of objects.
@@ -46,7 +50,7 @@ function updateRender() {
             <tr>
                 <td>${human.firstName}</td>
                 <td>${human.lastName}</td>
-                <td>${human.iDNumber}</td>
+                <td>${human.idNumber}</td>
                 <td>${human.jobTitle}</td>
 				<td>${human.annualSalary}</td>
 				<td>
