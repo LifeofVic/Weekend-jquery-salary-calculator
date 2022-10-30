@@ -49,8 +49,10 @@ function updateRender() {
                 <td>${human.iDNumber}</td>
                 <td>${human.jobTitle}</td>
 				<td>${human.annualSalary}</td>
-                    <button type="delete" id="deleteBtn">Remove 👋</button>
-            </tr>
+				<td>
+                    <button type="delete" id="delete-Btn">Remove</button>
+				</td>
+				</tr>
         `);
 	}
 	updateMonthlySalary();
@@ -64,21 +66,23 @@ function updateMonthlySalary() {
 
 	for (human of employees) {
 		totalSum += Number(human.annualSalary);
+		if (totalSum > 20000) {
+			$('#totalSalary').addClass('highSalary');
+		}
+		else {
+			$('#totalSalary').removeClass('highSalary');
+		}
+
 	}
 
 	console.log('Total sum of all employees salary is: ', totalSum);
+
 	$('#totalSalary').html(`
 			<h2>	
 				Total Monthly Salary: ${totalSum}
 			</h2>
-		`);
+	`);
 
-	if (totalSum > 20000) {
-		$('#totalSalary').addClass('.highSalary');
-	}
-	else {
-		$('#totalSalary').removeClass('.highSalary');
-	}
 
 
 }
