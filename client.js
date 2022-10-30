@@ -108,6 +108,9 @@ function updateMonthlySalary() {
 			</h2>
 	`);
 
-
-
+	$('#annualSalary').html(`
+			<h3>	
+				Total Yearly Salary: $ ${(totalSum).toLocaleString("en-US")}
+			</h3>
+	`);
 }
