@@ -1,21 +1,22 @@
 .highSalary {
 	background-color: red;
 	text-align: center;
-}
-
-.salary {
-	text
+	padding: 8px;
+	display: inline-block;
+	border-radius: 2px;
+	animation: flashingBackground 6s infinite;
 }
 
 #employeeTable,
 td {
 	padding: 2px;
 	border-width: 2px;
-	border-radius: 10px;
+	border-style: line;
 }
 
 td {
 	padding: 8px 12px;
+	border-style:double;
 }
 
 header {
@@ -25,4 +26,33 @@ header {
 	margin: 8px;
 	border-radius: 10px;
 
+}
+
+#addEmployee-Btn {
+	padding: 4px;
+	margin: 2px;
+	border-width: 2px;
+
+}
+
+@keyframes flashingBackground {
+	0% {
+		background-color: red;
+	}
+
+	25% {
+		background-color: white;
+	}
+
+	50% {
+		background-color: red;
+	}
+
+	75% {
+		background-color: white;
+	}
+
+	100% {
+		background-color: red;
+	}
 }
