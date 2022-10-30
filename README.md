@@ -2,9 +2,7 @@
 Salary Calculator
 ## Description
 
-_Duration: 14 hours.
-
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it? 
+Duration: 14 hours.
 
 The Salary Calculator Project will calculate the monthy salary based on the total annual salary for each employee. This will display a red flashing box around the "Total Monthly Salary" value if the value exceeds $20,000. 
 
