@@ -4,7 +4,7 @@
 	padding: 8px;
 	display: inline-block;
 	border-radius: 2px;
-	animation: flashingBackground 6s infinite;
+	animation: flashingBackground 3s infinite;
 }
 
 #employeeTable,

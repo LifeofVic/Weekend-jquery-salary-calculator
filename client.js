@@ -4,10 +4,11 @@ let employees = [];
 
 function onReady() {
 
-	console.log('Checking if Jquery Loaded up properly');
+	console.log('We made it inside Jquery!!!!');
 
 	$('#addEmployee-Btn').on('click', addingEmployee);
 
+	$('#employeeTable').on('click', '#delete-Btn', deleteEmployee);
 
 }
 
@@ -17,7 +18,7 @@ function addingEmployee() {
 	addedEmployees = {
 		firstName: $('#firstNameInput').val(),
 		lastName: $('#lastNameInput').val(),
-		iDNumber: $('#idNumberInput').val(),
+		idNumber: $('#idNumberInput').val(),
 		jobTitle: $('#jobTitleInput').val(),
 		annualSalary: $('#annualSalaryInput').val()
 	}
@@ -36,7 +37,27 @@ function addingEmployee() {
 }
 
 function deleteEmployee() {
+	let newEmployeeList = [];
+	console.log('We are in the deleteEmployee function');
 
+	let employeeToDelete = $(this)  //the delete <button>
+		.parent()            //table data element in which the button lives <td>
+		.siblings()          //all <td> in that row.
+		.first().text();            //the first of those <td>'s
+
+	console.log('Should match the object info of where the Remove button was clicked: ', employeeToDelete);
+
+	for (let human of employees) {
+		//add items that DON'T match contentToDelete into new array. 
+		if (human.firstName !== employeeToDelete) {
+			newEmployeeList.push(human);
+		}
+
+	}
+	console.log('newEmployeeList is: ', newEmployeeList);
+	employees = newEmployeeList;
+
+	updateRender();
 }
 
 function updateRender() {
@@ -67,7 +88,6 @@ function updateMonthlySalary() {
 
 	let totalSum = 0;
 
-
 	for (human of employees) {
 		totalSum += Number(human.annualSalary);
 		if (totalSum > 20000) {
@@ -78,12 +98,11 @@ function updateMonthlySalary() {
 		}
 
 	}
-
 	console.log('Total sum of all employees salary is: ', totalSum);
 
 	$('#totalSalary').html(`
 			<h2>	
-				Total Monthly Salary: ${totalSum}
+				Total Monthly Salary: $ ${totalSum.toLocaleString("en-US")}
 			</h2>
 	`);
 
