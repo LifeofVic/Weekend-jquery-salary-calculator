@@ -2,3 +2,27 @@
 	background-color: red;
 	text-align: center;
 }
+
+.salary {
+	text
+}
+
+#employeeTable,
+td {
+	padding: 2px;
+	border-width: 2px;
+	border-radius: 10px;
+}
+
+td {
+	padding: 8px 12px;
+}
+
+header {
+	text-align: Center;
+	background-color: blue;
+	padding: 4px;
+	margin: 8px;
+	border-radius: 10px;
+
+}
